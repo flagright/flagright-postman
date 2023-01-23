@@ -1,0 +1,322 @@
+{
+  "info": {
+    "name": "api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.example.com",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "auth": {
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ],
+    "type": "bearer"
+  },
+  "item": [
+    {
+      "name": "Business User",
+      "item": [
+        {
+          "name": "Create a Business User",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/business/users",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "business",
+                "users"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"userId\": \"example\",\n    \"legalEntity\": {\n        \"companyGeneralDetails\": {\n            \"legalName\": \"example\",\n            \"businessIndustry\": [\n                \"example\"\n            ],\n            \"mainProductsServicesSold\": [\n                \"example\"\n            ],\n            \"tags\": [\n                {\n                    \"key\": \"example\",\n                    \"value\": \"example\"\n                }\n            ]\n        },\n        \"companyFinancialDetails\": {\n            \"expectedTransactionPerMonth\": {\n                \"amountValue\": 0,\n                \"amountCurrency\": \"1INCH\"\n            },\n            \"expectedTurnoverPerMonth\": {\n                \"amountValue\": 0,\n                \"amountCurrency\": \"1INCH\"\n            },\n            \"tags\": [\n                {\n                    \"key\": \"example\",\n                    \"value\": \"example\"\n                }\n            ]\n        },\n        \"companyRegistrationDetails\": {\n            \"registrationIdentifier\": \"example\",\n            \"registrationCountry\": \"AF\",\n            \"taxIdentifier\": \"example\",\n            \"legalEntityType\": \"example\",\n            \"dateOfRegistration\": \"example\",\n            \"tags\": [\n                {\n                    \"key\": \"example\",\n                    \"value\": \"example\"\n                }\n            ]\n        },\n        \"reasonForAccountOpening\": [\n            \"example\"\n        ],\n        \"contactDetails\": {\n            \"emailIds\": [\n                \"example\"\n            ],\n            \"contactNumbers\": [\n                \"example\"\n            ],\n            \"faxNumbers\": [\n                \"example\"\n            ],\n            \"websites\": [\n                \"example\"\n            ],\n            \"addresses\": [\n                {\n                    \"addressLines\": [\n                        \"UNKNOWN\"\n                    ],\n                    \"postcode\": \"example\",\n                    \"city\": \"example\",\n                    \"state\": \"example\",\n                    \"country\": \"example\",\n                    \"tags\": [\n                        {\n                            \"key\": \"example\",\n                            \"value\": \"example\"\n                        }\n                    ]\n                }\n            ]\n        }\n    },\n    \"createdTimestamp\": 0,\n    \"riskLevel\": \"VERY_HIGH\",\n    \"userStateDetails\": {\n        \"userId\": \"example\",\n        \"reason\": \"example\",\n        \"state\": \"UNACCEPTABLE\"\n    },\n    \"kycStatusDetails\": {\n        \"reason\": \"example\",\n        \"status\": \"SUCCESSFUL\"\n    },\n    \"shareHolders\": [\n        {\n            \"generalDetails\": {\n                \"name\": {\n                    \"firstName\": \"example\",\n                    \"middleName\": \"example\",\n                    \"lastName\": \"example\"\n                },\n                \"dateOfBirth\": \"example\",\n                \"countryOfResidence\": \"AF\",\n                \"countryOfNationality\": \"AF\"\n            },\n            \"legalDocuments\": [\n                {\n                    \"documentType\": \"example\",\n                    \"documentNumber\": \"example\",\n                    \"documentIssuedDate\": 0,\n                    \"documentExpirationDate\": 0,\n                    \"documentIssuedCountry\": \"AF\",\n                    \"tags\": [\n                        {\n                            \"key\": \"example\",\n                            \"value\": \"example\"\n                        }\n                    ],\n                    \"nameOnDocument\": {\n                        \"firstName\": \"example\",\n                        \"middleName\": \"example\",\n                        \"lastName\": \"example\"\n                    }\n                }\n            ],\n            \"contactDetails\": {\n                \"emailIds\": [\n                    \"example\"\n                ],\n                \"contactNumbers\": [\n                    \"example\"\n                ],\n                \"faxNumbers\": [\n                    \"example\"\n                ],\n                \"websites\": [\n                    \"example\"\n                ],\n                \"addresses\": [\n                    {\n                        \"addressLines\": [\n                            \"UNKNOWN\"\n                        ],\n                        \"postcode\": \"example\",\n                        \"city\": \"example\",\n                        \"state\": \"example\",\n                        \"country\": \"example\",\n                        \"tags\": [\n                            {\n                                \"key\": \"example\",\n                                \"value\": \"example\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"pepStatus\": [\n                \"SUCCESSFUL\"\n            ],\n            \"tags\": [\n                {\n                    \"key\": \"example\",\n                    \"value\": \"example\"\n                }\n            ]\n        }\n    ],\n    \"directors\": [\n        {\n            \"generalDetails\": {\n                \"name\": {\n                    \"firstName\": \"example\",\n                    \"middleName\": \"example\",\n                    \"lastName\": \"example\"\n                },\n                \"dateOfBirth\": \"example\",\n                \"countryOfResidence\": \"AF\",\n                \"countryOfNationality\": \"AF\"\n            },\n            \"legalDocuments\": [\n                {\n                    \"documentType\": \"example\",\n                    \"documentNumber\": \"example\",\n                    \"documentIssuedDate\": 0,\n                    \"documentExpirationDate\": 0,\n                    \"documentIssuedCountry\": \"AF\",\n                    \"tags\": [\n                        {\n                            \"key\": \"example\",\n                            \"value\": \"example\"\n                        }\n                    ],\n                    \"nameOnDocument\": {\n                        \"firstName\": \"example\",\n                        \"middleName\": \"example\",\n                        \"lastName\": \"example\"\n                    }\n                }\n            ],\n            \"contactDetails\": {\n                \"emailIds\": [\n                    \"example\"\n                ],\n                \"contactNumbers\": [\n                    \"example\"\n                ],\n                \"faxNumbers\": [\n                    \"example\"\n                ],\n                \"websites\": [\n                    \"example\"\n                ],\n                \"addresses\": [\n                    {\n                        \"addressLines\": [\n                            \"UNKNOWN\"\n                        ],\n                        \"postcode\": \"example\",\n                        \"city\": \"example\",\n                        \"state\": \"example\",\n                        \"country\": \"example\",\n                        \"tags\": [\n                            {\n                                \"key\": \"example\",\n                                \"value\": \"example\"\n                            }\n                        ]\n                    }\n                ]\n            },\n            \"pepStatus\": [\n                \"SUCCESSFUL\"\n            ],\n            \"tags\": [\n                {\n                    \"key\": \"example\",\n                    \"value\": \"example\"\n                }\n            ]\n        }\n    ],\n    \"transactionLimits\": {\n        \"maximumDailyTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"maximumWeeklyTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"maximumMonthlyTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"maximumQuarterlyTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"maximumTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"maximumYearlyTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"paymentMethodLimits\": {\n            \"ACH\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"CARD\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"IBAN\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"UPI\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"GENERIC_BANK_ACCOUNT\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"MPESA\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"SWIFT\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"WALLET\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"CHECK\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            }\n        }\n    },\n    \"allowedPaymentMethods\": [\n        \"ACH\"\n    ],\n    \"tags\": [\n        {\n            \"key\": \"example\",\n            \"value\": \"example\"\n        }\n    ],\n    \"mccDetails\": {\n        \"code\": 0,\n        \"description\": \"example\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Retrieve a Business User",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/business/users/:userId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "business",
+                "users",
+                ":userId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Create a Business User Event",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/events/business/user",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "events",
+                "business",
+                "user"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"example\": \"UNKNOWN\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Consumer User",
+      "item": [
+        {
+          "name": "Create a Consumer User",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/consumer/users",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "consumer",
+                "users"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"userId\": \"example\",\n    \"userDetails\": {\n        \"name\": {\n            \"firstName\": \"example\",\n            \"middleName\": \"example\",\n            \"lastName\": \"example\"\n        },\n        \"dateOfBirth\": \"example\",\n        \"countryOfResidence\": \"AF\",\n        \"countryOfNationality\": \"AF\"\n    },\n    \"createdTimestamp\": 0,\n    \"userStateDetails\": {\n        \"userId\": \"example\",\n        \"reason\": \"example\",\n        \"state\": \"UNACCEPTABLE\"\n    },\n    \"kycStatusDetails\": {\n        \"reason\": \"example\",\n        \"status\": \"SUCCESSFUL\"\n    },\n    \"legalDocuments\": [\n        {\n            \"documentType\": \"example\",\n            \"documentNumber\": \"example\",\n            \"documentIssuedDate\": 0,\n            \"documentExpirationDate\": 0,\n            \"documentIssuedCountry\": \"AF\",\n            \"tags\": [\n                {\n                    \"key\": \"example\",\n                    \"value\": \"example\"\n                }\n            ],\n            \"nameOnDocument\": {\n                \"firstName\": \"example\",\n                \"middleName\": \"example\",\n                \"lastName\": \"example\"\n            }\n        }\n    ],\n    \"contactDetails\": {\n        \"emailIds\": [\n            \"example\"\n        ],\n        \"contactNumbers\": [\n            \"example\"\n        ],\n        \"faxNumbers\": [\n            \"example\"\n        ],\n        \"websites\": [\n            \"example\"\n        ],\n        \"addresses\": [\n            {\n                \"addressLines\": [\n                    \"UNKNOWN\"\n                ],\n                \"postcode\": \"example\",\n                \"city\": \"example\",\n                \"state\": \"example\",\n                \"country\": \"example\",\n                \"tags\": [\n                    {\n                        \"key\": \"example\",\n                        \"value\": \"example\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"transactionLimits\": {\n        \"maximumDailyTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"maximumWeeklyTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"maximumMonthlyTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"maximumQuarterlyTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"maximumTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"maximumYearlyTransactionLimit\": {\n            \"amountValue\": 0,\n            \"amountCurrency\": \"1INCH\"\n        },\n        \"paymentMethodLimits\": {\n            \"ACH\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"CARD\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"IBAN\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"UPI\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"GENERIC_BANK_ACCOUNT\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"MPESA\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"SWIFT\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"WALLET\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            },\n            \"CHECK\": {\n                \"transactionCountLimit\": {\n                    \"day\": 0,\n                    \"week\": 0,\n                    \"month\": 0,\n                    \"year\": 0\n                },\n                \"transactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                },\n                \"averageTransactionAmountLimit\": {\n                    \"day\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"week\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"month\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    },\n                    \"year\": {\n                        \"amountValue\": 0,\n                        \"amountCurrency\": \"1INCH\"\n                    }\n                }\n            }\n        }\n    },\n    \"riskLevel\": \"VERY_HIGH\",\n    \"reasonForAccountOpening\": [\n        \"example\"\n    ],\n    \"pepStatus\": [\n        \"SUCCESSFUL\"\n    ],\n    \"tags\": [\n        {\n            \"key\": \"example\",\n            \"value\": \"example\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Retrieve a Consumer User",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/consumer/users/:userId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "consumer",
+                "users",
+                ":userId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "",
+                  "description": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Create a Consumer User Event",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/events/consumer/user",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "events",
+                "consumer",
+                "user"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"example\": \"UNKNOWN\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Transaction",
+      "item": [
+        {
+          "name": "Verify a Transaction",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/transactions?validateOriginUserId=&validateDestinationUserId=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "transactions"
+              ],
+              "query": [
+                {
+                  "key": "validateOriginUserId",
+                  "value": "",
+                  "description": "Boolean string whether Flagright should validate if provided originUserId exist. True by default"
+                },
+                {
+                  "key": "validateDestinationUserId",
+                  "value": "",
+                  "description": "Boolean string whether Flagright should validate if provided destinationUserId exist. True by default"
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"DEPOSIT\",\n    \"transactionId\": \"example\",\n    \"timestamp\": 0,\n    \"originUserId\": \"example\",\n    \"destinationUserId\": \"example\",\n    \"transactionState\": \"CREATED\",\n    \"originAmountDetails\": {\n        \"transactionAmount\": 0,\n        \"transactionCurrency\": \"1INCH\",\n        \"country\": \"AF\"\n    },\n    \"destinationAmountDetails\": {\n        \"transactionAmount\": 0,\n        \"transactionCurrency\": \"1INCH\",\n        \"country\": \"AF\"\n    },\n    \"relatedTransactionIds\": [\n        \"example\"\n    ],\n    \"productType\": \"example\",\n    \"promotionCodeUsed\": true,\n    \"reference\": \"example\",\n    \"deviceData\": {\n        \"batteryLevel\": 0,\n        \"deviceLatitude\": 0,\n        \"deviceLongitude\": 0,\n        \"ipAddress\": \"example\",\n        \"deviceIdentifier\": \"example\",\n        \"vpnUsed\": true,\n        \"operatingSystem\": \"example\",\n        \"deviceMaker\": \"example\",\n        \"deviceModel\": \"example\",\n        \"deviceYear\": \"example\",\n        \"appVersion\": \"example\"\n    },\n    \"tags\": [\n        {\n            \"key\": \"example\",\n            \"value\": \"example\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Retrieve a Transaction",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/transactions/:transactionId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "transactions",
+                ":transactionId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "transactionId",
+                  "value": "",
+                  "description": "Unique Transaction Identifier"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Create a Transaction Event",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/events/transaction",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "events",
+                "transaction"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"transactionState\": \"CREATED\",\n    \"timestamp\": 10000000,\n    \"transactionId\": \"example\",\n    \"eventId\": \"example\",\n    \"reason\": \"example\",\n    \"eventDescription\": \"example\",\n    \"updatedTransactionAttributes\": {\n        \"transactionState\": \"CREATED\",\n        \"originAmountDetails\": {\n            \"transactionAmount\": 0,\n            \"transactionCurrency\": \"1INCH\",\n            \"country\": \"AF\"\n        },\n        \"destinationAmountDetails\": {\n            \"transactionAmount\": 0,\n            \"transactionCurrency\": \"1INCH\",\n            \"country\": \"AF\"\n        },\n        \"relatedTransactionIds\": [\n            \"example\"\n        ],\n        \"productType\": \"example\",\n        \"promotionCodeUsed\": true,\n        \"reference\": \"example\",\n        \"deviceData\": {\n            \"batteryLevel\": 0,\n            \"deviceLatitude\": 0,\n            \"deviceLongitude\": 0,\n            \"ipAddress\": \"example\",\n            \"deviceIdentifier\": \"example\",\n            \"vpnUsed\": true,\n            \"operatingSystem\": \"example\",\n            \"deviceMaker\": \"example\",\n            \"deviceModel\": \"example\",\n            \"deviceYear\": \"example\",\n            \"appVersion\": \"example\"\n        },\n        \"tags\": [\n            {\n                \"key\": \"example\",\n                \"value\": \"example\"\n            }\n        ]\n    },\n    \"metaData\": {\n        \"batteryLevel\": 0,\n        \"deviceLatitude\": 0,\n        \"deviceLongitude\": 0,\n        \"ipAddress\": \"example\",\n        \"deviceIdentifier\": \"example\",\n        \"vpnUsed\": true,\n        \"operatingSystem\": \"example\",\n        \"deviceMaker\": \"example\",\n        \"deviceModel\": \"example\",\n        \"deviceYear\": \"example\",\n        \"appVersion\": \"example\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    }
+  ]
+}
