@@ -1,13 +1,13 @@
-# Flagright OpenAPI Description
+# Flagright Postman Collection
 
-This repository contains the [OpenAPI description](/openapi.yml) for https://docs.flagright.com/.
+This repository contains a [Postman Collection](/collection.json) for the [Flagright API](https://docs.flagright.com/).
 
-## What is OpenAPI?
+[![Open in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/fern-api/workspace/fern-flagright)
 
-From the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification):
+## What is a Postman Collection?
 
-> The OpenAPI Specification (OAS) defines a standard, programming language-agnostic interface description for HTTP APIs, which allows both humans and computers to discover and understand the capabilities of a service without requiring access to source code, additional documentation, or inspection of network traffic.
+> Postman is an API testing tool. You can group your Postman requests and examples into collections to keep your workspace organized. A Postman Collection can be shared internally and externally.
 
 ## Issues
 
-Feel free to [leave an issue](https://github.com/fern-flagright/flagright-openapi/issues) on this repo.
+Feel free to [leave an issue](https://github.com/fern-flagright/flagright-postman/issues) on this repo.
