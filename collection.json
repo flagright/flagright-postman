@@ -1,12 +1,12 @@
 {
   "info": {
-    "name": "api",
+    "name": "Flagright API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
     {
       "key": "baseUrl",
-      "value": "",
+      "value": "https://sandbox.api.flagright.com",
       "type": "string"
     },
     {
