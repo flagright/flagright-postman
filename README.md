@@ -2,7 +2,7 @@
 
 This repository contains a [Postman Collection](/collection.json) for the [Flagright API](https://docs.flagright.com/).
 
-[![Open in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/fern-api/workspace/fern-flagright)
+[![Open in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/lively-firefly-529317/workspace/flagright-postman)
 
 ## What is a Postman Collection?
 
