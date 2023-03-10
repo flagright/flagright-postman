@@ -10,4 +10,4 @@ This repository contains a [Postman Collection](/collection.json) for the [Flagr
 
 ## Issues
 
-Feel free to [leave an issue](https://github.com/fern-flagright/flagright-postman/issues) on this repo.
+Feel free to leave an issue on this repo.
